@@ -1,4 +1,4 @@
-from calc import add, mod, mul, power, sub
+from calc import add, divide, mod, mul, power, sub
 
 
 def test_add():
@@ -39,10 +39,25 @@ def test_power():
     assert power(-2, 3) == -8
 
 
+def test_divide():
+    """Test division, including negatives and division by zero."""
+    assert divide(6, 3) == 2
+    assert divide(5, 2) == 2.5
+    assert divide(-8, 2) == -4
+    assert divide(0, 5) == 0
+    try:
+        divide(1, 0)
+    except ZeroDivisionError:
+        pass
+    else:
+        raise AssertionError("divide by zero should raise ZeroDivisionError")
+
+
 if __name__ == "__main__":
     test_add()
     test_sub()
     test_mul()
     test_mod()
     test_power()
+    test_divide()
     print("All tests passed successfully!")

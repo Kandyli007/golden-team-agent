@@ -1,0 +1,6 @@
+- MANDATORY WORKFLOW: Every time you modify any python file (like calc.py), you MUST immediately run `python test_calc.py` in the terminal to verify the changes.
+- Do NOT declare the task complete or finish your response until you see the output "All tests passed successfully!".
+- If the test fails, you must automatically fix the code and re-run the test until it passes.
+- All Python code must be written with clear function docstrings.
+- Every time a new math function is added to calc.py, a corresponding test must be added to test_calc.py.
+- Always run tests and ensure they pass before finishing tasks.

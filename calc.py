@@ -34,3 +34,21 @@ def power(a, b):
         The result of a raised to the power of b.
     """
     return a ** b
+
+
+def divide(a, b):
+    """Return the quotient of a divided by b.
+
+    Args:
+        a: The dividend.
+        b: The divisor. Must not be zero.
+
+    Returns:
+        The quotient of a divided by b.
+
+    Raises:
+        ZeroDivisionError: If b is zero.
+    """
+    if b == 0:
+        raise ZeroDivisionError("division by zero")
+    return a / b
